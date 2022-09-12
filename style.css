@@ -1,4 +1,60 @@
-h1{
-    text-align: center;
-    color:blueviolet
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(232, 236, 253);
+}
+h1 {
+  color: blueviolet;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+}
+h2 {
+  margin: 0 auto;
+  padding-top: 20px;
+  font-weight: 200;
+  font-size: 45px;
+}
+li {
+  padding: 20px;
+  list-style: none;
+  margin: 0;
+  display: inline;
+  color: blueviolet;
+  line-height: 2px;
+}
+h3 {
+  padding: 4px;
+  line-height: 1px;
+  font-size: 18px;
+  line-height: 1;
+}
+h4 {
+  padding: 0px;
+  line-height: 1px;
+  font-size: 18px;
+  margin-top: 2px;
+}
+.weatherPoints {
+  line-height: px;
+  font-size: 17px;
+  margin: 0 auto;
+}
+.wrapper {
+  max-width: 650px;
+  border: 1px solid blue;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.temperature {
+  font-size: 58px;
+  font-weight: 100;
+  line-height: px;
+}
+.unit {
+  position: relative;
+  top: -20px;
+  font-size: 25px;
+  padding: 0;
 }
