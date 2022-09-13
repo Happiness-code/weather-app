@@ -86,17 +86,22 @@ if (minutes < 10) {
 
 let h3 = document.querySelector("h3");
 h3.innerHTML = `${day}, ${month} ${formateDate}, ${year}. ${hours}:${minutes}`;
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 75;
+  temperatureElement.innerHTML =Math.round(fahrenheitTemperature) ;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature=(celiusTemperature * 9) / 5 + 32;
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 20;
+  temperatureElement.innerHTML =Math.round(celiusTemperature) ;
 }
+let celiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
