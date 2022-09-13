@@ -32,6 +32,7 @@ h4 {
   line-height: 1px;
   font-size: 18px;
   margin-top: 2px;
+  text-transform: capitalize;
 }
 .weatherPoints {
   line-height: px;
