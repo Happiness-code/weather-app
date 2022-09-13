@@ -44,6 +44,7 @@ function locationButton(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", locationButton);
 let date = new Date();
@@ -85,3 +86,19 @@ if (minutes < 10) {
 
 let h3 = document.querySelector("h3");
 h3.innerHTML = `${day}, ${month} ${formateDate}, ${year}. ${hours}:${minutes}`;
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 75;
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 20;
+}
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
