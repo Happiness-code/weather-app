@@ -58,3 +58,6 @@ h4 {
   font-size: 25px;
   padding: 0;
 }
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
