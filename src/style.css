@@ -64,4 +64,11 @@ h4 {
     border-bottom: 1px solid #f9f7fe;
     padding-bottom: 50px;
 }
+.forecast-temperature {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.5;
+    color: ;
+    font-weight: 700;
+  }
 
