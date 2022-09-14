@@ -46,6 +46,13 @@ h4 {
   font-size: 25px;
   padding: 0;
 }
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
 .WeatherForecast {
     text-align: center;
     margin: 40px 0;
