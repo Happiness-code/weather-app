@@ -1,8 +1,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, 
+  #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
 }
 h1 {
-  color: blueviolet;
+  color:#dbdcd7;
   font-size: 28px;
   font-weight: 500;
   line-height: 28px;
@@ -13,6 +15,7 @@ h2 {
   font-weight: 700;
   font-size: 50px;
   line-height: 40px;
+  color: #dbdcd7;
 }
 
 h3 {
@@ -25,6 +28,7 @@ h4 {
   font-size: 18px;
   margin-top: 2px;
   text-transform: capitalize;
+  color:#dddcd7
 }
 
 .wrapper {
@@ -53,6 +57,9 @@ h4 {
   color: rgb(33, 33, 33);
   cursor: default;
 }
+.humidity{
+  color: #dddcd7;
+}
 .WeatherForecast {
     text-align: center;
     margin: 40px 0;
@@ -63,7 +70,8 @@ h4 {
     font-style: normal;
     font-size: 18px;
     line-height: 1.5;
-    color: ;
+  font-family: Arial, Helvetica, sans-serif;
+    color: #801357;
     font-weight: 700;
   }
 .WeatherForecast .forecast-temperature-min {
