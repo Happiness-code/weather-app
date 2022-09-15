@@ -18,6 +18,24 @@ function displayWeather(response) {
 
 }
 
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="WeatherForecast row" id="forecast" >
+            <div class="col">
+              <div class="WeatherForecastPreview">
+                <div class="forecast-time">Wed</div>
+          <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt=""
+                  width="42">
+          <div class="forecast-temperature">
+            <span class="forecast-temperature-max">28°</span>
+            <span class="forecast-temperature-min">17°</span>
+          </div>
+        </div>
+        </div>`;
+}
+
 function search(city) {
   let apiKey = "d33243fa11c3284dcffcf337fc75caaa";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -70,6 +88,9 @@ function locationButton(event) {
 
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", locationButton);
+
+displayForecast();
+
 let date = new Date();
 let days = [
   "Sunday",
