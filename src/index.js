@@ -18,13 +18,14 @@ function displayWeather(response) {
 
 }
 
-function displayForecast(){
+function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue","Wed", "Thu", "Fri"];
-  days.forEach(function(day){
-forecastHTML = forecastHTML +
-           ` <div class="col">
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col">
               <div class="WeatherForecastPreview">
                 <div class="forecast-time">${day}</div>
           <img
@@ -37,8 +38,8 @@ forecastHTML = forecastHTML +
           </div>
         </div>`;
   });
-        forecastHTML= forecastHTML+ `</div>`;
-        forecastElement.innerHTML=forecastHTML;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function search(city) {

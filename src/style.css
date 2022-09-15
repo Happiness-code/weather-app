@@ -49,6 +49,7 @@ h4 {
   top: -20px;
   font-size: 25px;
   padding: 0;
+
 }
  .active:hover {
   text-decoration: none;
@@ -56,6 +57,7 @@ h4 {
  .active {
   color: rgb(33, 33, 33);
   cursor: default;
+  text-decoration: none;
 }
 p{font-size: 20px;
   margin: 0 auto;
