@@ -20,10 +20,13 @@ function displayWeather(response) {
 
 function displayForecast(){
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = `<div class="WeatherForecast row" id="forecast" >
-            <div class="col">
+  forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue","Wed", "Thu", "Fri"];
+  days.forEach(function(day){
+forecastHTML = forecastHTML +
+           ` <div class="col">
               <div class="WeatherForecastPreview">
-                <div class="forecast-time">Wed</div>
+                <div class="forecast-time">${day}</div>
           <img
                   src="http://openweathermap.org/img/wn/50d@2x.png"
                   alt=""
@@ -32,8 +35,10 @@ function displayForecast(){
             <span class="forecast-temperature-max">28°</span>
             <span class="forecast-temperature-min">17°</span>
           </div>
-        </div>
         </div>`;
+  });
+        forecastHTML= forecastHTML+ `</div>`;
+        forecastElement.innerHTML=forecastHTML;
 }
 
 function search(city) {
