@@ -22,7 +22,7 @@ function displayWeather(response) {
 function getForecast(coordinates) {
   console.log(coordinates)
   let apiKey = "d33243fa11c3284dcffcf337fc75caaa";
-  let apiUrl = ` https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = ` https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&&appid=${apiKey}&units=matric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -85,7 +85,7 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null;
-search("Madrid, Spain");
+search("Madrid");
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", showCity);
