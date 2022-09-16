@@ -19,6 +19,12 @@ function displayWeather(response) {
     getForecast(response.data.coord);
 }
 
+function search(city) {
+  let apiKey = "d33243fa11c3284dcffcf337fc75caaa";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
 function getForecast(coordinates) {
   console.log(coordinates)
   let apiKey = "d33243fa11c3284dcffcf337fc75caaa";
@@ -50,12 +56,24 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-function search(city) {
+displayForecast()
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", showCity);
+function searchLocation(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
   let apiKey = "d33243fa11c3284dcffcf337fc75caaa";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&`;
   axios.get(apiUrl).then(displayWeather);
 }
+function locationButton(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentButton = document.querySelector("#current-button");
+currentButton.addEventListener("click", locationButton);
+
 
 function showCity(event) {
   event.preventDefault();
@@ -87,22 +105,6 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let celsiusTemperature = null;
 search("Madrid");
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", showCity);
-function searchLocation(position) {
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiKey = "d33243fa11c3284dcffcf337fc75caaa";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&`;
-  axios.get(apiUrl).then(displayWeather);
-}
-function locationButton(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
-
-let currentButton = document.querySelector("#current-button");
-currentButton.addEventListener("click", locationButton);
 
 
 let date = new Date();
