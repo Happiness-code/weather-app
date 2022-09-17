@@ -16,7 +16,8 @@ function displayWeather(response) {
        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
      );
      iconElement.setAttribute("alt", response.data.weather[0].description);
-    getForecast(response.data.coord);
+    
+     getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -32,9 +33,8 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response) {
-  let forecast= response.data.daliy;
+  let forecast = response.data.daliy;
   let forecastElement = document.querySelector("#forecast");
- let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (forecastDay) {
     forecastHTML =
