@@ -1,7 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, 
-  #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+  
+  background: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
 }
 h1 {
   color:#dbdcd7;
@@ -82,4 +82,7 @@ p{font-size: 20px;
 .WeatherForecast .forecast-temperature-min {
     margin-left: 10px;
     opacity: 0.5;
+}
+.info{
+  text-align: center;
 }
