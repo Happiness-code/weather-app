@@ -3,9 +3,9 @@
   <head>
     <title>WEATHER App</title>
     <meta charset="UTF-8" />
-    <link href="src/style.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
-    
+    <link href="src/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,9 +22,8 @@
   <body>
     <div class="contianer">
       <div class="wrapper">
-
         <h1>WEATHER FORECAST</h1>
-        
+
         <form class="search-form" id="search-form">
           <div class="row">
             <div class="col-6">
@@ -34,51 +33,68 @@
                 autofocus="on"
                 autocomplete="off"
                 id="city-input"
-                class="form-control shadow-sm"/>
+                class="form-control shadow-sm"
+              />
             </div>
             <div class="col-3">
               <input
                 type="submit"
                 value="Search"
-                class="form-control btn btn-primary shadow-sm"/>
+                class="form-control btn btn-primary shadow-sm"
+              />
             </div>
-              <div class="col-3">
+            <div class="col-3">
               <button type="button" class="btn btn-success" id="current-button">
-                Current</button>
+                Current
+              </button>
             </div>
           </div>
         </form>
         <h2 id="city"></h2>
         <h3 id="date">Thu,Aug 18,2022 01:51 pm</h3>
         <h4 id="description"></h4>
-        
+
         <div class="row">
           <div class="col-6">
-            <div class=" weather-temperature"></div>
-            <img src="" alt="Clear" id="icon" class="flex"/>
-        <span class="temperature" id="temperature"></span>
-          <span class="unit">
-          <a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a></span
-                  >
+            <div class="weather-temperature"></div>
+            <img src="" alt="Clear" id="icon" class="flex" />
+            <span class="temperature" id="temperature"></span>
+            <span class="unit">
+              <a href="#" id="celsius-link" class="active">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a></span
+            >
           </div>
           <div class="col-6">
-           <p>
-            <em>Humidity:</em> <span class="humidity" id="humidity"></span>%
+            <p>
+              <em>Humidity:</em> <span class="humidity" id="humidity"></span>%
             </p>
-            <p class="wind-space"><em>wind</em>: <span class="wind" id="wind"></span>km/h
-          </p>
+            <p class="wind-space">
+              <em>wind</em>: <span class="wind" id="wind"></span>km/h
+            </p>
           </div>
-          <div class="WeatherForecast" id="forecast" >
-            </div>
-          </div>
-         
-      <span class="info"><small> <a href="https://github.com/Happiness-code/weather-app" target="_blank" rel="noreferre">
-        open-source link</a> coded by Happy JE<a href="https://majestic-sprite-aac581.netlify.app/" target="-blank" 
-        rel="noreferrer"> hosted on netlify</a></small></span> 
+          <div class="WeatherForecast" id="forecast"></div>
+        </div>
+
+        <span class="info"
+          ><small>
+            <a
+              href="https://github.com/Happiness-code/weather-app"
+              target="_blank"
+              rel="noreferre"
+            >
+              open-source link</a
+            >
+            coded by Happy JE<a
+              href="https://majestic-sprite-aac581.netlify.app/"
+              target="-blank"
+              rel="noreferrer"
+            >
+              hosted on netlify</a
+            ></small
+          ></span
+        >
+      </div>
     </div>
-      
-  </div>
     <script src="src/index.js"></script>
   </body>
 </html>
